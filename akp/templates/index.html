@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}Arun Prasad{% endblock %}
+
+{% block body %}
+<div class="wrapper">
+<article>
+<ul class="post-list">
+    {% for p in posts %}
+    <li><a href="{{ url_for('log', slug=p.slug) }}">
+        <span class="subtitle">({{ p.date }})</span>
+        {{ p.title }}
+    </a></li>
+    {% endfor %}
+</ul>
+</article>
+</div>
+{% endblock %}

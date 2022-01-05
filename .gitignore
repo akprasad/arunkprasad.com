@@ -1,0 +1,4 @@
+build/
+production/
+akp/static/gen/
+.webassets-cache/

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ post.title }} | Arun Prasad{% endblock %}
+
+{% block body %}
+<div class="wrapper">
+<nav>
+    <a href="{{ url_for('index') }}">Home</a>
+</nav>
+<article>
+<h1>
+    {{ post.title }}
+    <p class="subtitle">{{ post.date }}</p>
+</h1>
+{{ post.content|safe }}
+</article>
+</div>
+{% endblock %}
