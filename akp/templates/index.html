@@ -10,9 +10,10 @@
 <article>
 <ul class="post-list">
     {% for p in posts %}
-    <li><a href="{{ url_for('log', slug=p.slug) }}">
-        <span class="subtitle">({{ p.date }})</span>
-        {{ p.title }}
+    <li><a class="db" href="{{ url_for('log', slug=p.slug) }}">
+        <span class="post-title">{{ p.title }}</span>
+        <span class="f6 gray">({{ p.date }})</span>
+        <p class="f6 gray mt0">{{ p.description }}</p>
     </a></li>
     {% endfor %}
 </ul>

@@ -1,13 +1,14 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
     <title>{% block title %}{% endblock %}</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     {% assets "site_css" -%}
-    <link rel="stylesheet" rel="stylesheet" href="{{ ASSET_URL }}">
+    <link rel="stylesheet" href="{{ ASSET_URL }}">
     {%- endassets %}
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script defer data-domain="arunkprasad.com" src="https://plausible.io/js/plausible.js"></script>
+    {% block extrahead %}{% endblock %}
   </head>
   <body>
     {%- block body %}

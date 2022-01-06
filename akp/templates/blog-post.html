@@ -2,6 +2,10 @@
 
 {% block title %}{{ post.title }} | Arun Prasad{% endblock %}
 
+{% block extrahead -%}
+<meta name="description" content="{{ post.description }}">
+{%- endblock %}
+
 {% block body -%}
 <div class="wrapper">
 <nav>
@@ -9,10 +13,10 @@
     <a href="{{ url_for('atom_feed') }}">Feed</a>
 </nav>
 <article>
-<h1>
-    {{ post.title }}
-    <p class="subtitle">{{ post.date }}</p>
-</h1>
+<header>
+    <h1 class="mb0">{{ post.title }}</h1>
+    <p class="gray f7 normal db mt0">{{ post.date }}</p>
+</header>
 {{ post.content|safe }}
 </article>
 </div>

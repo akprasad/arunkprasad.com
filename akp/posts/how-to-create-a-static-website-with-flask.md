@@ -1,6 +1,7 @@
 title: How to create a static website with Flask
 date: 2022-01-05
-
+description: Static sites are fast and simple. Learn how to create one with
+             Flask and Flask-Frozen.
 
 Static sites are dead simple: simple to make, simple to deploy, and simple to
 serve. And *because* they're so simple, there are naturally [hundreds][ssg] of

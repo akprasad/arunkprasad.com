@@ -3,11 +3,11 @@ html {
   /* https://stackoverflow.com/a/3428477 */
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
+  font-size: 20px;
 }
 body {
   color: #222;
   font-family: Charter, Georgia, serif;
-  font-size: 20px;
 }
 nav {
     text-align: right;
@@ -20,32 +20,43 @@ h1, h2 {
     line-height: 3rem;
 }
 h2 {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
 }
 p, li {
-    line-height: 1.7rem;
+    line-height: 1.4rem;
 }
 a {
     color: inherit;
 }
-code, code span {
-    font-size: 1rem;
+pre, code {
+    font-size: 0.8rem;
 }
+
+.f4 { font-size: 1.25rem; }
+.f5 { font-size: 1rem; }
+.f6 { font-size: 0.875rem; }
+.f7 { font-size: 0.75rem; }
+
+.gray { color: #999; }
+.dark-gray { color: #555; }
+.normal { font-weight: normal; }
+.db { display: block; }
+
+.mt0 { margin-top: 0; }
+.mb0 { margin-bottom: 0; }
 
 .wrapper {
   max-width: 700px;
   margin: auto;
 }
-.subtitle {
-    color: #999;
-    font-size: 1rem;
-    font-weight: normal;
-}
 
+.post-list {
+    list-style: none;
+    padding: 0;
+}
 .post-list a {
-    color: #06f;
     text-decoration: none;
 }
-.post-list a:hover {
+.post-list a:hover .post-title {
     text-decoration: underline;
 }

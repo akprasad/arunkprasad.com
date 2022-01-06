@@ -22,6 +22,7 @@ class Post:
     title: str
     slug: str
     date: str
+    description: str
     content: str
 
     @property
@@ -43,6 +44,7 @@ def parse_post(slug: str):
         title=md.Meta["title"][0],
         slug=slug,
         date=md.Meta["date"][0],
+        description=" ".join(md.Meta["description"]),
         content=content,
     )
 
