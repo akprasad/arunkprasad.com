@@ -25,3 +25,7 @@ Devserver:
 Deploy:
 
     ./production/deploy.py
+
+Atom feed validation:
+
+    https://validator.w3.org/feed/#validate_by_uri

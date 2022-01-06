@@ -1,8 +1,10 @@
 import os
 from dataclasses import dataclass
+from datetime import datetime
 
 import markdown
-from flask import Flask, render_template
+import pytz
+from flask import Flask, Response, render_template
 from flask_assets import Environment, Bundle
 
 
@@ -20,6 +22,12 @@ class Post:
     slug: str
     date: str
     content: str
+
+    @property
+    def iso_datetime(self):
+        dt = datetime.fromisoformat(self.date)
+        dt = dt.replace(tzinfo=pytz.timezone("America/Los_Angeles"))
+        return dt.isoformat()
 
 
 def parse_post(slug: str):
@@ -61,3 +69,10 @@ def about():
 def log(slug):
     post = parse_post(slug)
     return render_template("blog-post.html", post=post)
+
+
+@app.route("/atom.xml")
+def atom_feed():
+    posts = list(load_all_posts())
+    text = render_template("atom.xml", posts=posts)
+    return Response(text, mimetype="text/xml")

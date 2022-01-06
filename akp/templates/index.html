@@ -4,6 +4,9 @@
 
 {% block body %}
 <div class="wrapper">
+<nav>
+    <a href="{{ url_for('atom_feed') }}">Feed</a>
+</nav>
 <article>
 <ul class="post-list">
     {% for p in posts %}

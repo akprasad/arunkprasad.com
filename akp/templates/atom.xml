@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>arunkprasad.com feed</title>
+  <link href="https://arunkprasad.com" rel="alternate" />
+  <link href="https://arunkprasad.com/atom.xml" rel="self" />
+  <id>https://arunkprasad.com/</id>
+  <updated>{{ posts[0].iso_datetime }}</updated>
+  <entry>
+  {% for post in posts %}
+    {% set base = url_for('log', slug=post.slug) %}
+    <id>tag:arunkprasad.com,{{ post.date }}:{{ base }}</id>
+    <link href="https://arunkprasad.com{{ base }}"/>
+    <title>{{ post.title }}</title>
+    <author>
+      <name>Arun Prasad</name>
+    </author>
+    <published>{{ post.iso_datetime }}</published>
+    <updated>{{ post.iso_datetime }}</updated>
+    <summary>Not available yet.</summary>
+    <content type="html">
+      {{ post.content }}
+    </content>
+  {% endfor %}
+  </entry>
+</feed>
