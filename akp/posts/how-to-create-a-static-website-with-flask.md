@@ -80,7 +80,7 @@ templates above inherit from `base.html`, which defines my boilerplate:
 
 Since the end result is a static website, dynamic Flask features like session
 management and form submissions naturally won't work. This isn't an issue as
-long as you restrict yourself to using static site features.
+long as you stick to the basics: routes, templates, and no stateful logic.
 
 
 ## Writing posts with Markdown and Pygments

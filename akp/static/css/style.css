@@ -1,9 +1,13 @@
+html {
+  /* If absent, weird rendering of pygments on iPhone. */
+  /* https://stackoverflow.com/a/3428477 */
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
 body {
   color: #222;
   font-family: Charter, Georgia, serif;
   font-size: 20px;
-  /* If absent, weird rendering of pygments on iPhone. */
-  -webkit-text-size-adjust: none;
 }
 nav {
     text-align: right;
@@ -22,7 +26,7 @@ p, li {
     line-height: 1.7rem;
 }
 a {
-    color: #06f;
+    color: inherit;
 }
 code, code span {
     font-size: 1rem;

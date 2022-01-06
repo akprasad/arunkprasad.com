@@ -1,6 +1,7 @@
 import os
 from dataclasses import dataclass
 from datetime import datetime
+from typing import List
 
 import markdown
 import pytz
@@ -46,12 +47,14 @@ def parse_post(slug: str):
     )
 
 
-def load_all_posts():
+def load_all_posts() -> List[Post]:
+    posts = []
     with os.scandir(f"{PROJECT_DIR}/posts") as it:
         for entry in it:
             if entry.is_file():
                 slug, _, _ = entry.name.partition(".")
-                yield parse_post(slug)
+                posts.append(parse_post(slug))
+    return reversed(sorted(posts, key=lambda x: x.date))
 
 
 @app.route("/")
