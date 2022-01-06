@@ -1,5 +1,5 @@
 .codehilitetable {
-    font-size: 16px;
+    font-size: 1rem;
     border-collapse: collapse;
     box-shadow: 0 0 0.5em #eee8d5;
     width: 100%;
@@ -15,10 +15,11 @@
 }
 td.linenos, td.code {
     padding: 0.5rem;
+    padding-left: 1rem;
 }
 td.linenos {
     background-color: #eee8d5;
-    width: 1.5rem;
+    width: 2rem;
     text-align: right;
 }
 td.code {

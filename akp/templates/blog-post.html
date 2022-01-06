@@ -2,7 +2,7 @@
 
 {% block title %}{{ post.title }} | Arun Prasad{% endblock %}
 
-{% block body %}
+{% block body -%}
 <div class="wrapper">
 <nav>
     <a href="{{ url_for('index') }}">Home</a> |
@@ -16,4 +16,4 @@
 {{ post.content|safe }}
 </article>
 </div>
-{% endblock %}
+{%- endblock %}

@@ -1,14 +1,18 @@
-title: Create a static website with Flask
+title: How to create a static website with Flask
 date: 2022-01-05
 
 
-Static sites are dead simple and need almost no maintenance. Perhaps because
-they're so simple, there's no end of frameworks for generating them.
+Static sites are dead simple: simple to make, simple to deploy, and simple to
+serve. And *because* they're so simple, there are naturally [hundreds][ssg] of
+ways to manage them.
 
-But we also have excellent web frameworks that we can repurpose with minimal
-effort. Here I'll explain how I used Flask and Frozen-Flask to make this
-website. (You can see this site's source code [on GitHub][gh].)
+Even so, we have excellent and time-tested web frameworks that we can repurpose
+as static site generators with minimal effort. I made this website with Flask,
+and in this post I'll show you how.
 
+(You can see this site's source code [on GitHub][gh].)
+
+[ssg]: https://jamstack.org/generators/
 [gh]: https://github.com/akprasad/arunkprasad.com
 
 
@@ -126,10 +130,12 @@ Frozen-Flask can generally discover app URLs on its own. For most of my use
 cases, it works out of the box with no extra config:
 
     #!python
+    from flask_frozen import Freezer
+
     app.debug = False
     freezer = Freezer(app)
 
-    # By default, writes to the `build` directory
+    # By default, `freezer` writes to the `build` directory
     freezer.freeze()
 
 Then deployment is as simple as running the script above and syncing the output
@@ -137,7 +143,7 @@ to prod:
 
     #!bash
     ./freeze.py
-    rsync -r build <server_location>
+    rsync -r build <server_destination>
 
 
 ## Scaling this setup
@@ -147,6 +153,6 @@ when the source file changes. While I haven't used this approach for a truly
 massive setup with millions of static files, it has been totally sufficient for
 my needs.
 
-Overall, I love using Flask to create static websites. I can use a mature and
-clean framework that I love, and if I ever need to make my site dynamic, doing
-so is trivial. 
+Overall, I love using Flask to create static websites. I can use a mature
+framework that I love, lean on its rich ecosystem of plugins, and easily move
+to a dynamic application if necessary.

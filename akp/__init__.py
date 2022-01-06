@@ -75,4 +75,4 @@ def log(slug):
 def atom_feed():
     posts = list(load_all_posts())
     text = render_template("atom.xml", posts=posts)
-    return Response(text, mimetype="text/xml")
+    return Response(text, mimetype="application/xml")
