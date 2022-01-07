@@ -4,11 +4,11 @@
 
 {% block body %}
 <div class="wrapper">
-<nav>
-    <a href="{{ url_for('index') }}">Home</a>
-</nav>
+{% include 'include/nav.html' %}
 <article>
-about
+<h1>About</h1>
+
+<p>I'm a machine learning engineer based in San Francisco.</p>
 </article>
 </div>
 {% endblock %}

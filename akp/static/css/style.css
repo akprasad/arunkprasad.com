@@ -67,3 +67,12 @@ pre, code {
 .post-list a:hover .post-title {
     text-decoration: underline;
 }
+
+@media screen and (max-width: 30em) {
+	html {
+		font-size: 16px;
+	}
+	h1 {
+		font-size: 1.25rem;
+	}
+}
