@@ -48,8 +48,9 @@ The [viewport meta tag][viewport] is vital:
 Older versions of Safari support only `-webkit-text-size-adjust`, so we should
 include both.
 
-This [Stack Overflow answer][so] has some useful discussion on
-`text-size-adjust` and how to use it safely.
+!!! note
+	This [Stack Overflow answer][so] has some useful discussion on
+	`text-size-adjust` and how to use it safely.
 
 [viewport]: https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag
 [android]: https://developer.android.com/guide/webapps/targeting

@@ -39,11 +39,18 @@ pre, code {
 
 .gray { color: #999; }
 .dark-gray { color: #555; }
+.bold { font-weight: bold; }
 .normal { font-weight: normal; }
 .db { display: block; }
 
 .mt0 { margin-top: 0; }
 .mb0 { margin-bottom: 0; }
+
+.admonition-title { display: none; }
+.admonition { padding: 1rem; }
+.admonition p:nth-child(2) { margin-top: 0; }
+.admonition p:last-child { margin-bottom: 0; }
+.note { background: #fff4ca; }
 
 .wrapper {
   max-width: 700px;

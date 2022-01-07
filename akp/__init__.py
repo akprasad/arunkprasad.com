@@ -32,11 +32,12 @@ class Post:
         return dt.isoformat()
 
 
-def parse_post(slug: str):
-    with open(f"{PROJECT_DIR}/posts/{slug}.md") as f:
-        text = f.read()
+def parse_document(directory: str, slug: str):
+    md = markdown.Markdown(extensions=["meta", "codehilite", "admonition"])
 
-    md = markdown.Markdown(extensions=["meta", "codehilite"])
+    document_path = os.path.join(directory, f"{slug}.md")
+    with open(document_path) as f:
+        text = f.read()
     content = md.convert(text)
     content = content.replace("--", "&mdash;")
 
@@ -49,14 +50,32 @@ def parse_post(slug: str):
     )
 
 
-def load_all_posts() -> List[Post]:
-    posts = []
-    with os.scandir(f"{PROJECT_DIR}/posts") as it:
+def load_all_documents(directory: str) -> List[Post]:
+    documents = []
+    with os.scandir(directory) as it:
         for entry in it:
             if entry.is_file():
                 slug, _, _ = entry.name.partition(".")
-                posts.append(parse_post(slug))
-    return reversed(sorted(posts, key=lambda x: x.date))
+                documents.append(parse_document(directory, slug))
+    return reversed(sorted(documents, key=lambda x: x.date))
+
+
+def parse_log_post(slug: str):
+    directory = f"{PROJECT_DIR}/posts"
+    return parse_document(directory=directory, slug=slug)
+
+
+def parse_page(slug: str):
+    directory = f"{PROJECT_DIR}/pages"
+    return parse_document(directory=directory, slug=slug)
+
+
+def load_all_posts() -> List[Post]:
+    return load_all_documents(f"{PROJECT_DIR}/posts")
+
+
+def load_all_pages() -> List[Post]:
+    return load_all_documents(f"{PROJECT_DIR}/pages")
 
 
 @app.route("/")
@@ -72,8 +91,20 @@ def about():
 
 @app.route("/log/<slug>/")
 def log(slug):
-    post = parse_post(slug)
+    post = parse_log_post(slug)
     return render_template("blog-post.html", post=post)
+
+
+@app.route("/pages/")
+def pages():
+    page_map = {p.slug: p for p in load_all_pages()}
+    return render_template("pages.html", pages=page_map)
+
+
+@app.route("/pages/<slug>/")
+def page(slug):
+    page = parse_page(slug)
+    return render_template("blog-post.html", post=page)
 
 
 @app.route("/atom.xml")

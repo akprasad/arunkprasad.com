@@ -4,16 +4,13 @@
 
 {% block body %}
 <div class="wrapper">
-<nav>
-    <a href="{{ url_for('atom_feed') }}">Feed</a>
-</nav>
+{% include 'include/nav.html' %}
 <article>
 <ul class="post-list">
     {% for p in posts %}
     <li><a class="db" href="{{ url_for('log', slug=p.slug) }}">
+        <span class="f7 gray fl-r">{{ p.date }}</span>
         <span class="post-title">{{ p.title }}</span>
-        <span class="f6 gray">({{ p.date }})</span>
-        <p class="f6 gray mt0">{{ p.description }}</p>
     </a></li>
     {% endfor %}
 </ul>

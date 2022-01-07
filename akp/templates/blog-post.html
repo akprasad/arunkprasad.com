@@ -8,10 +8,7 @@
 
 {% block body -%}
 <div class="wrapper">
-<nav>
-    <a href="{{ url_for('index') }}">Home</a> |
-    <a href="{{ url_for('atom_feed') }}">Feed</a>
-</nav>
+{% include 'include/nav.html' %}
 <article>
 <header>
     <h1 class="mb0">{{ post.title }}</h1>

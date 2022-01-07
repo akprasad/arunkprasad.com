@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% macro page(slug) %}
+{% set p = pages[slug] %}
+<li><p><a class="db" href="{{ url_for('page', slug=p.slug) }}">
+    <span class="post-title bold">{{ p.title }}</span>
+    &mdash; {{ p.description }}
+</p></a></li>
+{% endmacro %}
+
+{% block title %}Pages | Arun Prasad{% endblock %}
+
+{% block body %}
+<div class="wrapper">
+{% include 'include/nav.html' %}
+<article>
+<ul class="post-list">
+    {{ page('backlog') }}
+</ul>
+</article>
+</div>
+{% endblock %}
