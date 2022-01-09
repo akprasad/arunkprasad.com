@@ -28,6 +28,14 @@ p, li {
 a {
     color: inherit;
 }
+dfn {
+	font-weight: bold;
+	font-style: normal;
+}
+p code, li code {
+    background: #eee;
+    padding: 0.2rem;
+}
 pre, code {
     font-size: 0.8rem;
 }

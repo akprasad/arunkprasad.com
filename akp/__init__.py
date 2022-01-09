@@ -23,6 +23,7 @@ class Post:
     slug: str
     date: str
     description: str
+    draft: bool
     content: str
 
     @property
@@ -47,6 +48,8 @@ def parse_document(directory: str, slug: str):
         date=md.Meta["date"][0],
         description=" ".join(md.Meta["description"]),
         content=content,
+        # Draft if this is set at all, for simplicity.
+        draft=bool(md.Meta.get("draft")),
     )
 
 
@@ -80,7 +83,7 @@ def load_all_pages() -> List[Post]:
 
 @app.route("/")
 def index():
-    posts = load_all_posts()
+    posts = [p for p in load_all_posts() if not p.draft]
     return render_template("index.html", posts=posts)
 
 
@@ -91,6 +94,18 @@ def about():
 
 @app.route("/log/<slug>/")
 def log(slug):
+    post = parse_log_post(slug)
+    return render_template("blog-post.html", post=post)
+
+
+@app.route("/drafts/")
+def drafts():
+    posts = [p for p in load_all_posts() if p.draft]
+    return render_template("index.html", posts=posts)
+
+
+@app.route("/drafts/<slug>/")
+def draft(slug):
     post = parse_log_post(slug)
     return render_template("blog-post.html", post=post)
 
@@ -109,6 +124,6 @@ def page(slug):
 
 @app.route("/atom.xml")
 def atom_feed():
-    posts = list(load_all_posts())
+    posts = [p for p in load_all_posts() if not p.draft]
     text = render_template("atom.xml", posts=posts)
     return Response(text, mimetype="application/xml")
