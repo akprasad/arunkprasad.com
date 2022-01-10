@@ -1,4 +1,4 @@
-title: A fast and simple Gmail workflow
+title: A Fast and Simple Gmail Workflow
 description: How I learned to stop worrying and tame my inbox
 date: 2022-01-07
 

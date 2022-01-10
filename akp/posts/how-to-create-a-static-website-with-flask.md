@@ -1,4 +1,4 @@
-title: How to create a static website with Flask
+title: How to Create a Static Website with Flask
 date: 2022-01-05
 description: Static sites are fast and simple. Learn how to create one with
              Flask and Flask-Frozen.

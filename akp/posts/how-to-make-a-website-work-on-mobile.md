@@ -1,4 +1,4 @@
-title: How to make a website work on mobile
+title: How to Make a Website Work on Mobile
 date: 2022-01-06
 description: The specific HTML and CSS you need to make sites mobile-friendly,
              and the tools to test your site across multiple devices.
