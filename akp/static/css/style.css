@@ -59,6 +59,11 @@ pre, code {
 .admonition p:nth-child(2) { margin-top: 0; }
 .admonition p:last-child { margin-bottom: 0; }
 .note { background: #fff4ca; }
+.thanks {
+    padding: 0;
+    font-size: 0.85em;
+    color: #999;
+}
 
 .wrapper {
   max-width: 700px;

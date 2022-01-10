@@ -116,7 +116,7 @@ Effort in everything:
 
 > There is a saying that a lion gives its all when chasing even a rabbit.
 
-The pain of effort yields the pleasure of progress:
+The pain of effort is worth it -- but only if done right:
 
 > Of course one cannot make progress in any discipline without effort. 'There
 > is no pleasure without pain.' Pleasure is progress, and pain the pain of

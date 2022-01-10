@@ -85,3 +85,7 @@ If this basic workflow works for you, here are some simple ways to extend it:
   really like using it. So I usually just hit `}` to archive everything.
 
 And if I decide this workflow needs changing, I'll post an update.
+
+!!! thanks
+    Thanks to [Naomi Alterman](http://nlalterman.com) for her suggestions and
+    Kai Wong for the discussion.
