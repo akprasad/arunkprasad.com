@@ -6,7 +6,7 @@ order: 2
 I think blogging is massively undervalued.
 
 
-## What I get out of blogging
+# What I get out of blogging
 
 *I can write whatever I want.* Few spaces on the Internet are just for you
 anymore, especially if you don't own the platform. There's something
@@ -39,7 +39,7 @@ find out what I might get is to try.
 [gmail]: /log/a-fast-and-simple-gmail-workflow/
 
 
-## Why I stayed away until now
+# Why I stayed away until now
 
 - *I felt I had nothing new to say.* I mainly blog for me, so I don't worry
   about it. Also, I now think that the idea of having nothing new to say is
@@ -58,7 +58,7 @@ find out what I might get is to try.
 - *"Blogging" sound so goofy.* Yes.
 
 
-## The social benefits (yes, really)
+# The social benefits (yes, really)
 
 - *Anyone can read it.* Why write an email that a handful of friends would
   read when I can create something public that anyone could share and enjoy?
@@ -70,7 +70,7 @@ find out what I might get is to try.
   our ideas with each other.
 
 
-## Credit where credit is due
+# Credit where credit is due
 
 Here are successful people who first put the seed of writing/blogging into my
 head:
@@ -85,7 +85,7 @@ head:
 [yegge]: https://sites.google.com/site/steveyegge2/you-should-write-blogs
 
 
-## Process and writing principles
+# Process and writing principles
 
 Here are the process principles I try to follow:
 

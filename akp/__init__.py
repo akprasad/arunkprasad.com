@@ -106,6 +106,8 @@ def about():
 def log(slug):
     cur = prev = next = None
     for p in load_all_posts():
+        if p.draft:
+            continue
         if p.slug == slug:
             cur = p
         elif cur:

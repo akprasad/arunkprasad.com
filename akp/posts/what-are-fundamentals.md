@@ -23,7 +23,7 @@ In this post, I'm doing some ground clearing for myself so that I better
 understand what fundamentals are.
 
 
-## Fundamentals in the games of life
+# Fundamentals in the games of life
 
 <dfn>Game theory</dfn> is a formal way of studying how people act and how they
 interact with each other. The word "game" sounds playful, but it is meant
@@ -65,7 +65,7 @@ and scope. They are important because they affect the entire set of games we
 play.
 
 
-## Finding fundamentals
+# Finding fundamentals
 
 At the broadest level, every game you play is constrained by reality, human
 nature, and your own self-nature. So all you need to do is find the deep
@@ -99,7 +99,7 @@ fundamental of all:
   Fred Rogers, what is mentionable is manageable.
 
  
-## Why fundamentals are simple
+# Why fundamentals are simple
 
 As principles become more fundamental, they inevitably lose detail and become 
 simpler and more essential. Three scenarios:
@@ -118,7 +118,7 @@ simpler and more essential. Three scenarios:
 Garbage in, garbage out.
 
 
-## Why fundamentals are neglected
+# Why fundamentals are neglected
 
 Simple principles cut across multiple domains, so we've heard them our whole
 lives. The most important ones instinctively sound like clichés, and their
@@ -141,7 +141,7 @@ fields. But I still think we should search for them only after mastering the
 fundamentals.
 
 
-## Why fundamentals are difficult
+# Why fundamentals are difficult
 
 Fundamentals are abstract generalizations across many different domains. The
 more applicable they are, the more abstract they become.
@@ -198,7 +198,7 @@ patience, efficiency, speed, ...
 But perhaps that should be its own post.
 
 
-## Coda: Riffing on the games of life
+# Coda: Riffing on the games of life
 
 As a parting thought, what I like about the "game" framing is that it neatly
 includes a lot of big concepts. To riff on it a bit:

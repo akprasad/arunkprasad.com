@@ -13,7 +13,7 @@ mobile-friendly, including some of the gotchas I've hit in the past.
 [q]: https://www.google.com/search?q=how+to+make+a+website+work+on+mobile
 
 
-## The essential setup
+# The essential setup
 
 Stick this in your page `<head>`:
 
@@ -58,7 +58,7 @@ include both.
 [so]: https://stackoverflow.com/a/3428477
 
 
-## Responsive CSS
+# Responsive CSS
 
 The basic structure of this is simple:
 
@@ -78,7 +78,7 @@ For the specific screen sizes, I just refer to a framework like
 [tw-breakpoints]: https://tailwindcss.com/docs/responsive-design
 
 
-## Debugging
+# Debugging
 
 I'm less familiar with Safari, but [Firefox][ff-dev] and [Chrome][chrome-dev]
 both have excellent developer consoles that let you emulate specific device
@@ -93,7 +93,7 @@ different devices. I've only ever used the free tier.
 [bs]: https://www.browserstack.com/responsive
 
 
-## If you really need a framework
+# If you really need a framework
 
 In yet another win for [composition over inheritance][coi], the last few years
 have seen the rise of compositional CSS frameworks like [Tachyons][tachyons]

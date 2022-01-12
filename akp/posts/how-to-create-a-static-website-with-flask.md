@@ -17,7 +17,7 @@ and in this post I'll show you how.
 [gh]: https://github.com/akprasad/arunkprasad.com
 
 
-## The application skeleton
+# The application skeleton
 
 If you're familiar with Flask already, you can skip this section. If not --
 behold! Flask is delightfully lightweight:
@@ -84,7 +84,7 @@ management and form submissions naturally won't work. This isn't an issue as
 long as you stick to the basics: routes, templates, and no stateful logic.
 
 
-## Writing posts with Markdown and Pygments
+# Writing posts with Markdown and Pygments
 
 I write posts in Markdown with some extra metadata:
 
@@ -125,7 +125,7 @@ The default CSS works well enough, but I had some issues with its whitespacing
 around line numbers and made some small changes to the defaults.
 
 
-## Deploying with Frozen-Flask
+# Deploying with Frozen-Flask
 
 Frozen-Flask can generally discover app URLs on its own. For most of my use
 cases, it works out of the box with no extra config:
@@ -147,7 +147,7 @@ to prod:
     rsync -r build <server_destination>
 
 
-## Scaling this setup
+# Scaling this setup
 
 I've scaled this setup by caching rendered text content and re-rendering only
 when the source file changes. While I haven't used this approach for a truly
