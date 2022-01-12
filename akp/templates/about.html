@@ -8,18 +8,30 @@
 <div class="wrapper">
 {% include 'include/nav.html' %}
 <article>
-<h1>About</h1>
+{% filter markdown %}
+# About
 
-<p>I'm a machine learning engineer in the Bay Area with previous experience
-with query understanding (Google Search) and content/user understanding and
-recommendations (Pinterest). In my personal projects I'm a full-stack
-generalist.</p>
+I'm a machine learning engineer in the Bay Area. Ex-Google, ex-Pinterest,
+Stanford '12. For details, see my [LinkedIn][linkedin].
 
-<p>(For details, see my <a href="{{ linkedin }}">LinkedIn</a>.)</p>
+[linkedin]: https://www.linkedin.com/in/arun-k-prasad
 
-<p>I am currently pursuing my own projects while hunting for the right role.
-Here are the problems I find </p>
+I'm currently pursuing my own projects while searching for the right role.
 
+Here are the problems I find most important and motivating:
+
+- *Human capability.* What would the world be like if we were wiser, kinder,
+and more capable? What makes people grow and perform at the highest level? How
+do we empower and inspire people to face the important problems in our lives,
+our communities, and our societies?
+
+- *Process and infrastructure.* What tools can we create to make humankind more
+capable and creative?  What systems will future generations wish we had started
+building now?
+
+- *Climate change.* What are the most effective ways to manage and mitigate the
+effects of climate change on human civilization?
+{% endfilter %}
 </article>
 </div>
 {% endblock %}

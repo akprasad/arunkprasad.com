@@ -17,4 +17,14 @@
 {{ post.content|safe }}
 </article>
 </div>
+
+<nav class="df prev-next">
+    {% if prev %}
+    <a href="{{ url_for('log', slug=prev.slug) }}">&larr; {{ prev.title }}</a>
+    {% endif %}
+    {% if next %}
+    <a href="{{ url_for('log', slug=next.slug) }}">{{ next.title }} &rarr;</a>
+    {% endif %}
+</nav>
 {%- endblock %}
+

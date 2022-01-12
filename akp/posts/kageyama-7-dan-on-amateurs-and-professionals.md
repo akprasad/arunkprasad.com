@@ -54,7 +54,7 @@ Like your craft; be willing to learn; and put in the effort to do it right:
 > studying.
 
 
-# On fundamentals:
+# On fundamentals
 
 Internalizing the fundamentals:
 

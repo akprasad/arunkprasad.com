@@ -6,11 +6,14 @@ from typing import List
 import markdown
 import pytz
 from flask import Flask, Response, render_template
+from flaskext.markdown import Markdown as FM
 from flask_assets import Environment, Bundle
 
 
 PROJECT_DIR = os.path.dirname(__file__)
 app = Flask(__name__)
+
+fm = FM(app, extensions=["meta", "codehilite", "admonition"])
 
 assets = Environment(app)
 css = Bundle("css/style.css", "css/pygments.css", output="gen/style.css")
@@ -57,7 +60,7 @@ def parse_document(directory: str, slug: str):
 
 
 def sort_documents(documents: List[Post]) -> List[Post]:
-    return reversed(sorted(documents, key=lambda p: (p.date, p.ordering)))
+    return sorted(documents, key=lambda p: (p.date, p.ordering))
 
 
 def load_all_documents(directory: str) -> List[Post]:
@@ -67,7 +70,7 @@ def load_all_documents(directory: str) -> List[Post]:
             if entry.is_file():
                 slug, _, _ = entry.name.partition(".")
                 documents.append(parse_document(directory, slug))
-    return sort_documents(documents)
+    return reversed(sort_documents(documents))
 
 
 def parse_log_post(slug: str):
@@ -101,8 +104,17 @@ def about():
 
 @app.route("/log/<slug>/")
 def log(slug):
-    post = parse_log_post(slug)
-    return render_template("blog-post.html", post=post)
+    cur = prev = next = None
+    for p in load_all_posts():
+        if p.slug == slug:
+            cur = p
+        elif cur:
+            next = p
+            break
+        else:
+            prev = p
+    cur = parse_log_post(cur.slug)
+    return render_template("blog-post.html", post=cur, prev=prev, next=next)
 
 
 @app.route("/drafts/")

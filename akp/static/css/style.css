@@ -50,6 +50,13 @@ pre, code {
 .bold { font-weight: bold; }
 .normal { font-weight: normal; }
 .db { display: block; }
+.df { display: flex; }
+
+.prev-next a {
+    flex: 1 1 auto;
+    text-align: center;
+    padding: 1rem;
+}
 
 .mt0 { margin-top: 0; }
 .mb0 { margin-bottom: 0; }
