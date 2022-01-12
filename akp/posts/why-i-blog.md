@@ -82,8 +82,11 @@ head:
 
 - Paul Graham (["Writing, Briefly"][pg])
 
+- Aaron Swartz (["What is going on here?"][aaron])
+
 - Steve Yegge (["You Should Write Blogs"][yegge])
 
+[aaron]: http://www.aaronsw.com/weblog/about
 [ch]: https://blog.codinghorror.com/how-to-achieve-ultimate-blog-success-in-one-easy-step/
 [yegge]: https://sites.google.com/site/steveyegge2/you-should-write-blogs
 
