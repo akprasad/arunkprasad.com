@@ -58,6 +58,11 @@ to flush the cache.
 
 # [iOS] Enable *Content & Privacy Restrictions*
 
+!!! warning
+    **Update** -- This doesn't work. iOS allows block lists only as part of
+    their "Limit Adult Websites" feature, which has false positives and can
+    block legitimate sites based on keywords.
+
 If you have an iOS device, you can also enable per-website restrictions:
 
 1. Go to *Content & Privacy Restrictions* in *Settings*.
