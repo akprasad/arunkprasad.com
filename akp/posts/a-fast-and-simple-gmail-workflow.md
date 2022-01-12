@@ -31,6 +31,11 @@ longer intimidating, and I can keep my inboxes clear.
 I use the default Gmail view and the default sort order. So my inbox is a
 simple list with the newest emails first.
 
+!!! note
+    Update -- I switched to a Multiple Inbox view and added a second view.
+    This view includes only emails marked with my `!` label, which I use for
+    important emails.
+
 The critical extension is *Keyboard shortcuts* under *Settings > General*. You
 can type `?` at any time to see all of the available shortcuts, but four are
 enough for this workflow to work:

@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}Arun Prasad{% endblock %}
+
+{% block body %}
+<div class="wrapper">
+{% include 'include/nav.html' %}
+<article>
+<h1>Drafts (in-progress)</h1>
+<ul class="post-list">
+    {% for p in posts %}
+    <li><a class="db" href="{{ url_for('draft', slug=p.slug) }}">
+        <span class="f7 gray fl-r">{{ p.date }}</span>
+        <span class="post-title">{{ p.title }}</span>
+    </a></li>
+    {% endfor %}
+</ul>
+</article>
+</div>
+{% endblock %}

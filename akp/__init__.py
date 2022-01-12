@@ -45,7 +45,7 @@ def parse_document(directory: str, slug: str):
         text = f.read()
     content = md.convert(text)
     content = content.replace("--", "&mdash;")
-    ordering = int(md.Meta.get("ordering", 0))
+    ordering = int(md.Meta.get("order", [0])[0])
 
     return Post(
         title=md.Meta["title"][0],
@@ -115,6 +115,7 @@ def log(slug):
             break
         else:
             prev = p
+    assert cur
     cur = parse_log_post(cur.slug)
     return render_template("blog-post.html", post=cur, prev=prev, next=next)
 
@@ -122,7 +123,7 @@ def log(slug):
 @app.route("/drafts/")
 def drafts():
     posts = [p for p in load_all_posts() if p.draft]
-    return render_template("index.html", posts=posts)
+    return render_template("drafts.html", posts=posts)
 
 
 @app.route("/drafts/<slug>/")

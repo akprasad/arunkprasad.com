@@ -172,7 +172,7 @@ The *top-down* approach exhaustively applies a fundamental we trust. How do you
 - measuring ceaselessly: timelines, metrics, performance, hotspots
 - checking that your work solves a real need
 - vetting your logic with unit and integration tests
-- documenting our project to clarify our APIs and design goals
+- documenting your project to clarify our APIs and design goals
 - mastering your project's languages and infrastructure
 - understanding your project's costs and projected costs
 - comparing your system to others and debating the trade-offs

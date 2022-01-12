@@ -1,4 +1,4 @@
-title: Exponential self-improvement?
+title: Exponential Self-Improvement?
 description: How good can someone get, and how quickly?
 date: 2022-01-10
 

@@ -5,6 +5,13 @@ description: All the things I want to write about someday.
 Here are all of the things I'm interested in writing about.
 
 
+## Fundamentals
+
+- fundamentals at different scales: life, knowledge work, software engineering
+- state-of-the-art summaries of: learning, habits, memory, sleep, energy, effort, attention/focus
+
+
+
 ## Technical deep dives
 
 - Languages:
