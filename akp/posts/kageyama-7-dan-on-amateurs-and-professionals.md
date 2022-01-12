@@ -38,7 +38,7 @@ The universal rule:
 
 On trusting the basics:
 
-> Go is the kind of game in which you are an expect if you can just keep on
+> Go is the kind of game in which you are an expert if you can just keep on
 > making ordinary moves. You need not play any especially brilliant moves at
 > all. Amateurs' moves, however, are frequently far from ordinary; in fact, I
 > see them making the most nonsensical moves imaginable[.]
@@ -80,9 +80,9 @@ On making them instinctual:
 
 Collapsing due to shallow, brittle knowledge:
 
-> [Those who memorize fixed opening patterns] tend to become too depending on
+> [Those who memorize fixed opening patterns] tend to become too dependent on
 > patterns, thereby crippling their innate strength, and fall easy prey to the
-> formal, who have nothing but innate strength to rely on.
+> former, who have nothing but innate strength to rely on.
 
 On the disastrous end of the amateur path. My favorite quote from the book:
 

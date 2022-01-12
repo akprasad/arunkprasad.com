@@ -25,6 +25,7 @@ class Post:
     description: str
     draft: bool
     content: str
+    ordering: int
 
     @property
     def iso_datetime(self):
@@ -41,6 +42,7 @@ def parse_document(directory: str, slug: str):
         text = f.read()
     content = md.convert(text)
     content = content.replace("--", "&mdash;")
+    ordering = int(md.Meta.get("ordering", 0))
 
     return Post(
         title=md.Meta["title"][0],
@@ -50,7 +52,12 @@ def parse_document(directory: str, slug: str):
         content=content,
         # Draft if this is set at all, for simplicity.
         draft=bool(md.Meta.get("draft")),
+        ordering=ordering,
     )
+
+
+def sort_documents(documents: List[Post]) -> List[Post]:
+    return reversed(sorted(documents, key=lambda p: (p.date, p.ordering)))
 
 
 def load_all_documents(directory: str) -> List[Post]:
@@ -60,7 +67,7 @@ def load_all_documents(directory: str) -> List[Post]:
             if entry.is_file():
                 slug, _, _ = entry.name.partition(".")
                 documents.append(parse_document(directory, slug))
-    return reversed(sorted(documents, key=lambda x: x.date))
+    return sort_documents(documents)
 
 
 def parse_log_post(slug: str):
