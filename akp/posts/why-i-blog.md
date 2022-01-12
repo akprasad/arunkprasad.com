@@ -55,7 +55,10 @@ find out what I might get is to try.
   what I care about is outstanding work, iterating repeatedly is the better way
   to go.
 
-- *"Blogging" sound so goofy.* Yes.
+- *I didn't set enough time aside to start.* It was only when I timed myself
+  writing that I realized how long it takes me to write something.
+
+- *"Blogging" sounds so goofy.* Yes.
 
 
 # The social benefits (yes, really)
